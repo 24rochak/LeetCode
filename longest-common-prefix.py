@@ -10,9 +10,7 @@ def longestCommonPrefix(strs) -> str:
             return ""
         it = 0
         while it < lenmax:
-            chars = []
-            for item in strs:
-                chars.append(item[it])
+            chars = [item[it] for item in strs]
             if len(set(chars)) == 1:
                 it += 1
             else:
