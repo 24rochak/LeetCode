@@ -1,3 +1,18 @@
+'''def removeDuplicates(nums) -> int:
+    print
+    i = 0
+    j = i + 1
+    while j < len(nums):
+        if nums[i] == nums[j]:
+            nums.pop(j)
+        else:
+            i=j
+            j+=1
+
+    print(nums)
+    print(i + 1)'''
+
+
 def removeDuplicates(nums) -> int:
     print
     i = 0
@@ -13,4 +28,4 @@ def removeDuplicates(nums) -> int:
     print(i + 1)
 
 
-removeDuplicates([])
+removeDuplicates([1, 2])
