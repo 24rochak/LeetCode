@@ -1,4 +1,5 @@
 def repeatedSubstringPattern(s: str) -> bool:
+    return s in (s * 2)[1:-1]
     l = len(s)
     i = 1
     while (i <= l / 2):
@@ -12,6 +13,6 @@ def repeatedSubstringPattern(s: str) -> bool:
     return False
 
 
-str = "abc"
+str = "abab"
 ans = repeatedSubstringPattern(str)
 print(ans)
