@@ -1,4 +1,5 @@
 def repeatedStringMatch(A: str, B: str) -> int:
+    '''The starting of B should be somewhere in A when A is as long as A or 2A. '''
     from math import ceil
     i = ceil(len(B) / len(A))
     if B in A * i:

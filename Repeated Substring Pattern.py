@@ -1,4 +1,5 @@
 def repeatedSubstringPattern(s: str) -> bool:
+    '''If A is build up of b*2 then A*2 should contain b'''
     return s in (s * 2)[1:-1]
     l = len(s)
     i = 1
@@ -13,6 +14,6 @@ def repeatedSubstringPattern(s: str) -> bool:
     return False
 
 
-str = "abab"
+str = "ababc"
 ans = repeatedSubstringPattern(str)
 print(ans)
