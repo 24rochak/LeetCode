@@ -34,12 +34,12 @@ def firstBadVersion(n, target):
     print("J :"+str(j)+"\tCost :"+str(max)+"\tid :"+str(id))
 
 '''
-n = 100
+'''n = 100
 max = 0
 for i in range(n, 0, -1):
     ans = firstBadVersion(n, i)
     print(i, ans, sum(ans))
-    '''if ans > max:
+    if ans > max:
         max = ans
         id = i
     print("i:"+str(i)+"cost"+str(max)+" id: "+str(id))'''
