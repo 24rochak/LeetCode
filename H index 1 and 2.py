@@ -9,16 +9,18 @@ def hIndex(citations):
     n = len(citations)
     right = n - 1
     while left <= right:
+
         mid = (left + right) // 2
+        print(left, mid, right)
         if citations[mid] == (n - mid):
             return n - mid
-        elif citations[mid] < (n - mid):
+        elif citations[mid] < (n - mid): # can fulfill current criteria,check if more citations can be accommodated
             left = mid + 1
         else:
-            right = mid - 1
+            right = mid - 1 # can't fulfill current criteria, check if less length can fulfill
     return n - left
 
 
-citations = []
+citations = [0]
 ans = hIndex(citations)
 print(ans)
