@@ -14,10 +14,10 @@ def hIndex(citations):
         print(left, mid, right)
         if citations[mid] == (n - mid):
             return n - mid
-        elif citations[mid] < (n - mid): # can fulfill current criteria,check if more citations can be accommodated
+        elif citations[mid] < (n - mid):  # can fulfill current criteria,check if more citations can be accommodated
             left = mid + 1
         else:
-            right = mid - 1 # can't fulfill current criteria, check if less length can fulfill
+            right = mid - 1  # can't fulfill current criteria, check if less length can fulfill
     return n - left
 
 
