@@ -6,6 +6,7 @@ def addBinary(a: str, b: str) -> str:
     j = len(b) - 1
     carry = 0
     while i >= 0 and j >= 0:
+        print("hello")
         temp = int(a[i]) + int(b[j]) + carry
         if temp == 0:
             ans += "0"
@@ -59,7 +60,7 @@ def addBinary(a: str, b: str) -> str:
         return ans[::-1]
 
 
-a = "11"
+a = "111"
 b = "1"
 ans = addBinary(a, b)
 print(ans)
