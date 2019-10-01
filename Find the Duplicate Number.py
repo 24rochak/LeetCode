@@ -17,7 +17,7 @@ def findDuplicate(nums) -> int:
         p1 = nums[p1]
         p2 = nums[p2]
 
-    return null
+    return None
 
 
 nums = [2, 5, 9, 6, 9, 3, 8, 9, 7, 1]
