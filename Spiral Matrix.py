@@ -1,28 +1,26 @@
 def spiralOrder(matrix) -> [int]:
-    nrows = len(matrix)
-    ncols = len(matrix[0])
-    print(nrows, ncols)
+    row_start, col_start = 0, 0
+    row_end, col_end = len(matrix) - 1, len(matrix[0]) - 1
 
-    count = 0
-    i, j = 0, -1
     ans = []
-    p = 0
-    while count < nrows * ncols:
-        for j in range(j + 1, ncols - p):
-            ans.append(matrix[i][j])
-            count += 1
-        for i in range(i + 1, nrows - p):
-            ans.append(matrix[i][j])
-            count += 1
-        for j in reversed(range(j - 1, p)):
-            ans.append(matrix[i][j])
-            count += 1
-        for i in reversed(range(i - 1, p + 1)):
-            ans.append(matrix[i][j])
-            count += 1
-        p += 1
+    while row_start <= row_end and col_start <= col_end:
+        for i in range(col_start, col_end + 1):
+            ans.append(matrix[row_start][i])
+        row_start += 1
 
-        print(ans)
+        for i in range(row_start, row_end + 1):
+            ans.append(matrix[i][col_end])
+        col_end -= 1
+
+        if row_start <= row_end:
+            for i in range(col_end, col_start - 1, -1):
+                ans.append(matrix[row_end][i])
+            row_end -= 1
+
+        if col_start <= col_end:
+            for i in range(row_end, row_start - 1, -1):
+                ans.append(matrix[i][col_start])
+            col_start += 1
 
     return ans
 
@@ -30,7 +28,8 @@ def spiralOrder(matrix) -> [int]:
 mat = [
     [1, 2, 3],
     [4, 5, 6],
-    [7, 8, 9]
+    [7, 8, 9],
+    [10, 11, 12]
 ]
 
 ans = spiralOrder(mat)
