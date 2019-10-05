@@ -17,6 +17,5 @@ def permuteUnique(nums):
     nums.sort()
     return helper(nums)
 
-
 nums = [1, 1, 2]
 print(permuteUnique(nums))
