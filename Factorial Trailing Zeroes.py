@@ -5,5 +5,4 @@ def trailingZeroes(n):
         i *= 5
     return count
 
-
 print(trailingZeroes(50))
