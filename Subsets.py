@@ -6,5 +6,5 @@ def subsets(nums):
     return ans
 
 
-nums = [1, 2, 3, 4]
+nums = ['m', 'o', 'k', 'k', 'o', 'r', 'i']
 print(subsets(nums))
