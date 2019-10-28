@@ -11,7 +11,6 @@ def buildTree(preorder, inorder):
     :type inorder: List[int]
     :rtype: TreeNode
     """
-
     def dfs(prestart, instart, inend, preorder, inorder):
         if prestart > len(preorder) - 1 or instart > inend:
             return None
