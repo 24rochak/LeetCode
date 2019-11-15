@@ -5,7 +5,6 @@ def dfs(board, i, j, word):
         return False
     tmp = board[i][j]
     board[i][j] = "#"
-    # check whether can find "word" along one direction
     res = dfs(board, i + 1, j, word[1:]) or \
           dfs(board, i - 1, j, word[1:]) or \
           dfs(board, i, j + 1, word[1:]) or \
