@@ -8,7 +8,6 @@ def isPossible(nums):
     i = 0
     while i < len(nums):
         cur = nums[i]
-
         count = 0
         while i < len(nums) and cur == nums[i]:
             count += 1
