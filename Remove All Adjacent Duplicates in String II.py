@@ -4,7 +4,7 @@ def removeDuplicates(s, k):
     :type k: int
     :rtype: str
     """
-    '''while True:
+    while True:
         new_s = ""
         i, j = 0, 1
         while j < len(s):
@@ -13,7 +13,7 @@ def removeDuplicates(s, k):
                 i += 1
                 j += 1
             else:
-                while j < len(s) and s[j] == s[i] and j - i < k:
+                while j < len(s) and s[j] == s[i]:  # and j - i < k:
                     j += 1
                 if j - i < k:
                     new_s += s[i:j]
@@ -24,7 +24,8 @@ def removeDuplicates(s, k):
         if new_s == s:
             break
         s = new_s
-    return s'''
+    return s
+    '''
     cs = set(s)
     while True:
         ns = s
@@ -33,10 +34,10 @@ def removeDuplicates(s, k):
         if s == ns:
             break
         s = ns
-    return s
+    return s'''
 
 
-s = "abcd"
-k = 2
+s = "acaaaacc"
+k = 3
 ans = removeDuplicates(s, k)
 print(ans)
