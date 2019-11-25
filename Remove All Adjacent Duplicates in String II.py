@@ -4,6 +4,17 @@ def removeDuplicates(s, k):
     :type k: int
     :rtype: str
     """
+    '''
+    cs = set(s)
+    while True:
+        ns = s
+        for c in cs:
+            ns = ns.replace(c * k, '')
+        if s == ns:
+            break
+        s = ns
+    return s
+    '''
     while True:
         new_s = ""
         i, j = 0, 1
@@ -13,7 +24,7 @@ def removeDuplicates(s, k):
                 i += 1
                 j += 1
             else:
-                while j < len(s) and s[j] == s[i]:  # and j - i < k:
+                while j < len(s) and s[j] == s[i] and j - i < k:
                     j += 1
                 if j - i < k:
                     new_s += s[i:j]
@@ -25,16 +36,6 @@ def removeDuplicates(s, k):
             break
         s = new_s
     return s
-    '''
-    cs = set(s)
-    while True:
-        ns = s
-        for c in cs:
-            ns = ns.replace(c * k, '')
-        if s == ns:
-            break
-        s = ns
-    return s'''
 
 
 s = "acaaaacc"
